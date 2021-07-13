@@ -1,10 +1,10 @@
 package entidades;
 
-public class  Conta {
+abstract class  Conta {
 		
 		//atributos.
 		private int numero;
-		protected double saldo;
+		protected double saldo=0;
 		private char opcoes;
 		
 		//construtor
@@ -63,30 +63,6 @@ public class  Conta {
 			System.out.println("Banco G3");
 			System.out.println("Seu dinheiro em desenvolvimento!\n");
 		}
-		
-		public void menu() {
-			String menu[] = {"Conta Poupança","Conta Corrente","Conta Especial","Conta Empresa","Conta Estudante","Sair"};
-			
-			System.out.println("G3 Bank");
-			System.out.println("Se dinheiro em desenvolvimento!\n");
-			
-			for(int x=0; x<6; x++){
-				System.out.println((x+1)+"-"+menu[x]+"\n");
-			}
-		}
-		
-
-
-
-
-
-
-
-
-
-
-
-
 }
 		
 		//crédito.

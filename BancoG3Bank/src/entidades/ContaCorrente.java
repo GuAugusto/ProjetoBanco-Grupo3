@@ -13,6 +13,7 @@ public class ContaCorrente extends Conta {
 		System.out.println("Bem vinde sua Conta Corrente!");
 		System.out.println("Faça um crédito para iniciar sua conta!");
 		System.out.println("Saldo Atual: "+saldo);
+		System.out.printf("Você possui %d talões disponiveis.\tCusto de R$30 por talão.\n",talao);
 	}
 	
 	public int getTalao() {
@@ -25,7 +26,7 @@ public class ContaCorrente extends Conta {
 			System.out.println("Valor inválido!\n");
 		} else if(pedido<=talao && saldo>30.00) {
 			saldo = saldo - 30.00;
-			talao--;
+			talao-=pedido;
 			System.out.printf("Seu pedido de talão foi concluído! Ainda restam %d talões",talao);
 		} else if(pedido>talao) {
 			System.out.println("Você já solicitou todos os talões disponiveis esse mês.");
